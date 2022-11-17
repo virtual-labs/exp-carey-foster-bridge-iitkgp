@@ -2,35 +2,86 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "A modified Carey Foster's bridge shown in the figure is used for measurement of capacitance. Arm ab contains the secondary winding a mutual inductance of 18.35 mH and a total non reactive resistance of 200 Ω. The inductance of secondary of mutual inductor in arm ab is 40.6 mH .Arm ad is short circuited. Arm bc contains the unknown capacitor in series with a resistance of 119.5 Ω. Arm cd comprises of a resistor of 100 Ω resistance. Determine the capacitance and its equivalent series resistance.<br/><p style=\"text-align:center\"><img src=\"./image/quiz1.jpg\" style=\"width:460px;height:330px;\"></p>",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "C<sub>3</sub>=0.718uF and R<sub>3</sub>=151.2Ω",
+        "b": "C<sub>3</sub>=0.818uF and R<sub>3</sub>=111.2Ω",
+        "c": "C<sub>3</sub>=0.618uF and R<sub>3</sub>=101.2Ω",
+        "d": "C<sub>3</sub>=0.918uF and R<sub>3</sub>=121.2Ω"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (d).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (d).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (d).",
+        "d": "You have choosen option (d). The answer is correct"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "At balance R<sub>4</sub>=10Ω, R<sub>3</sub>=25.1`+-0.1` Ω, R<sub>1</sub>=100Ω, L<sub>1</sub>=22.82 mH and M=4920`+-10` uH. Find the unknown capacitance C<sub>3</sub> and the limits of accuracy determined by the limits of balance measurements indicated.<br/><p style=\"text-align:center\"><img src=\"./image/quiz2.jpg\" style=\"width:460px;height:330px;\"></p>",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "C<sub>3</sub>=5.92`+-0.01uF` and accuracy limit=0.5%",
+        "b": "C<sub>3</sub>=6.92`+-0.01uF` and accuracy limit=0.4%",
+        "c": "C<sub>3</sub>=3.92`+-0.01uF` and accuracy limit=0.3%",
+        "d": "C<sub>3</sub>=4.92`+-0.01uF` and accuracy limit=0.2%"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (d).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (d).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (d).",
+        "d": "You have choosen option (d). The answer is correct"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Suppose in the above example the value of R<sub>3</sub> does not include the series loss resistance of capacitor, find the loss resistance and limits of its accuracy",
+      "answers": {
+        "a": "0.615%",
+        "b": "0.915%" ,
+        "c": "0.515%" ,
+        "d": "0.415%" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (b).",
+        "b": "You have choosen option (b). The answer is correct.",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (b).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (b)."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If a capacitor is connected across a portion of resistance of multiplier of the wattmeter then the pressure coil of the circuit becomes",
+      "answers": {
+        "a": "Capacitive",
+        "b": "Non capacitive" ,
+        "c": "Inductive" ,
+        "d": "Non inductive" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (d).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (d).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (d).",
+        "d": "You have choosen option (d). The answer is correct."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Shielding of the capacitor is done to",
+      "answers": {
+        "a": "Balance the bridge without any problem",
+        "b": "Make the value of capacitor definite" ,
+        "c": "Both the above" ,
+        "d": "None of these" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (c).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (c).",
+        "c": "You have choosen option (c). The answer is correct.",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (c)."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
