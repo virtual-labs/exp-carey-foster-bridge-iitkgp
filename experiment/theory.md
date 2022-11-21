@@ -31,3 +31,4 @@ At balance,
 `R_3 = R_4*(L_1 - M)/M `
 
 While in measurement of capacitance C3,  R3   is not a separate unit but represents the equivalent series resistance of the capacitor and thus can be determined in terms of the elements of the bridge.
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
