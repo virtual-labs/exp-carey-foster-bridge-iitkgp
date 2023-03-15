@@ -1,13 +1,116 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<!--<a href="./thevenin_website.html" target="popup" onclick="window.open('./thevenin_website.html','name','width=1350,height=675')">Open page in new window</a>
+-->
+<title>Carey Foster Bridge</title>
+<link rel="stylesheet" type="text/css" href="css/exp3_css.css">
+<script class="include" type="text/javascript" src="./jquery_files/jquery.min.js"></script>
+<script class="include" type="text/javascript" src="./jquery_files/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shCore.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shBrushJScript.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shBrushXml.min.js"></script>
+<script class="include" type="text/javascript" src="./jquery_files/jqplot.meterGaugeRenderer.min.js"></script>
+		<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<style> 
+#rcorners3 {
+    border-radius: 10px;
+    border: 2px solid #8AC007;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 5px;   
+}
+</style>
+</head>
+
+<body background="./images/pg_bg.gif"> 
+<script src="js/exp3_js.js"></script>
+<div id="whole_body" style=" position:relative; margin-left:auto; margin-right:auto; top:0px; width:1160px;">
+<div style="font-size:40px; text-align:center; height:60px"> <b>Measurement of Capacitance by Carey Foster Bridge</b></div>
+<div id="description" style="background-color:#99CCFF; border-radius:10px; border:2px solid #8AC007; position:absolute; align:left; left:10px; width:620px;">
+	<h3>&nbsp <u>Procedure:</u> </h3>
+	 <ol type="1">
+		  <li>Set the voltage (V=12V) and Frequency (500Hz) and set the unknown capacitance value from <b>'Set capacitor value'</b> tab by clicking on <b>'set'</b> button.</li>
+		   <br><li>Then switch on the supply to get millivoltmeter deflection.</li>
+		  <br><li>Now vary the values of <b>R<sub>1</sub>, L<sub>1</sub>, M and R<sub>4</sub></b>  from  the control box below or directly put the values in the boxes of respective elements.</li>
+		  <br><li>Observe the millivoltmeter pointer to achieve "Null".</li>
+		  <br><li>If "NULL" is achieved, switch to <b>'Measure capacitance value'</b> tab and click on <b>'Simulate'</b>. Observe calculated values of 
+			unknown capacitance (C<sub>3</sub>) and unknown internal resistance (R<sub>3</sub>) of the capacitor. Also observe the Dissipation factor of the 
+			unknown capacitor, which is defined as `w*C*R`. where,  `w=2*pi*f`.</li>
+		  
+	</ol> 
+</div>
+
+<form name='f1'>
+
+<div id="ckt_values1" style="position:relative; border: 2px solid #8AC007; border-radius: 10px; left:650px; height:500px; width:500px">
+	<p>
+	<img src="./images/heydweiller bridge _theory.jpg" alt="Tutorials Point" style="position:absolute; border-radius: 10px; top:0px;  right:0px; height:500px; width:500px"/>
+	<img id="myImage" onclick="changeImage()" src="./images/s1.png" style="cursor: pointer; position:absolute; height:50px; width:50px; top:380px;  right:310px;"/>
+	<div class="example-content" style="position:absolute; top:125px;  right:150px;">
+	<link rel="stylesheet" type="text/css" href="./jquery_files/css_metergauge.css">
+	<div id="chart3" class="plot" style="background-color:transparent; width:200px; height:120px;"></div>
+	<script src="./jquery_files/js_metergauge.js"></script>
+	</div>
+	<input type="number" name="r1" id="r1" min="1" max="11100000" step="1" value="1" onchange="pr1.value=this.value; execute_ckt();" style="position:absolute; top:35px;  right:326px; width:70px">	
+	
+	<input type="number" name="r4" id="r4" min="1" max="11100000" step="1" value="1" onchange="pr4.value=this.value; execute_ckt();" style="position:absolute; top:264px;  right:70px; width:70px">
+	<input type="number" name="l1" id="l1" min="1" max="1000" step="1" value="1000"  onchange="pl1.value=this.value; execute_ckt();" style="position:absolute; top:140px;  right:334px; width:48px">
+	<input type="number" name="m1" id="m1" min="1" max="100" step="1" value="1" onchange="pm1.value=this.value; execute_ckt();" style="position:absolute; top:90px;  right:422px; width:40px">
+
+	<input type="number" name="r3" value="5" id="r3" style="position:absolute; top:55px;  right:100px; width:50px; background-color:transparent; border:none;" readonly="readonly">
+	<input type="number" name="c3" value="0.01" id="c3" style="position:absolute; top:125px;  right:25px; width:70px; background-color:transparent; border:none;" readonly="readonly">	
+	<input type="number" name="v1" value="12" id="v1" style="position:absolute; top:400px;  right:250px; width:50px">
+	<input type="number" name="f1" value="500" id="f1" style="position:absolute; top:400px;  right:200px; width:40px">
+	<input type="number" name="A1" value="0" id="A1" style="background-color:#E3DE84; text-align:center; position:absolute; top:215px;  right:210px; width:70px" readonly="readonly">
+	</p>
+</div>
+
+<div style="position:absolute; top:350px;  left:10px;">
+<ul class="tabs" >
+        <li>
+          <input type="radio" checked name="tabs" id="tab1" onclick="changemode()">
+          <label for="tab1">Set capacitor value</label>
+          <div id="tab-content1" class="tab-content animated fadeIn">
+			<u>Set the actual values of C<sub>3</sub>:</u> (R<sub>3</sub> value is fixed at 5 Ohm)<br>
+			&nbsp Enter the C<sub>3</sub> values and click on the set button.<br> 
+			&nbsp&nbsp&nbspC3 (in `muF`):&nbsp 
+			<input type="button" value="Set" onclick="Set_c()" style="text-align:center; cursor: pointer; background-color:#FE4080; width:90px; height:60px; font-size:18px; position:absolute; top:55px; right:20px;">
+ 
+			<input type="number" name="c33" id="c33" min="0.001" max="100000" step="0.0001" value="0.01" onchange="pc33.value=this.value;" style="width:70px">
+			<br>0.001 `muF`&nbsp <input type="range" name="pc33" id="pc33" min="0.001" max="100000" step="0.0001" value="1.0001" onchange="c33.value=this.value;" style=" width:300px"> &nbsp0.1 F
+			</div>
+        </li>
+        <li>
+          <input type="radio" name="tabs" id="tab2" onclick="changemode()">
+          <label for="tab2">Measure capacitor value</label>
+          <div id="tab-content2" class="tab-content animated fadeIn">
+            The current voltmeter reading is: 
+			<input type="number" name="A2" value="0" id="A2" style="background-color:#E3DE84; text-align:center; width:60px" readonly="readonly"> &nbsp mv. Now simulate to get:
+			
+			<br>&nbsp&nbsp&nbsp&nbsp Capacitor value (in `muF`):
+			<input type="number" name="c333" value="0" id="c333" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+			<br> Resistance value (in `Ohm`):
+			<input type="number" name="r333" value="0" id="r333" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+			<br> Dissipation Factor:
+			<input type="number" name="rd33" value="0" id="rd33" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+			<input type="button" value="Simulate" onclick="simulate_rc()" style="cursor: pointer; background-color:#FE4080; text-align:center; font-size: 25px; position:absolute; top:50px; right:20px; width:150px; height:55px">
+			
+          </div>
+        </li>
+</ul>
+</div>
+<div id="rcorners3" style="background: url(./images/bg5.jpg); position:absolute; top:580px; right:0px; width:500px; color:#FFFFFF" align="center">
+	<b>CONTROLS</b><br>
+	&nbsp&nbsp R1 : 1 Ohm &nbsp <input type="range" name="pr1" id="pr1" min="1" max="11100000" step="1" value="1" onchange="r1.value=this.value; execute_ckt();" style="width:280px">&nbsp 11.5 MOhm<BR>	
+	&nbsp&nbsp R4 : 1 Ohm &nbsp <input type="range" name="pr4" id="pr4" min="1" max="11100000" step="1" value="1" onchange="r4.value=this.value; execute_ckt();" style=" width:280px">&nbsp 11.5 MOhm<br>
+	&nbsp&nbsp L1 : 1 uH &nbsp <input type="range" name="pl1" id="pl1" min="1" max="1000" step="1" value="1000" onchange="l1.value=this.value; execute_ckt();" style=" width:280px">&nbsp 1000 uH<br>
+	&nbsp&nbsp M: 1 uH &nbsp <input type="range" name="pm1" id="pm1" min="1" max="100" step="1" value="1" onchange="m1.value=this.value; execute_ckt();" style=" width:280px">&nbsp 100 uH<br>
+	
+<br>	
+</div>
+
+</form>
+</div>
 </body>
 </html>
