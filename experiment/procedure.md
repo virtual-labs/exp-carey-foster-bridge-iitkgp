@@ -1,5 +1,9 @@
 ## Procedure
-![Circuit diagram for measurement of capacitance by Carey Foster Bridge](images/careyfoster_capacitance_procedure_upload.jpg)
+<div align="center">
+![Circuit diagram for measurement of capacitance by Carey Foster Bridge](images/careyfoster_capacitance_procedure_upload.jpg)<br/>
+  Figure 1: Circuit diagram for measurement of capacitance by Carey Foster Bridge
+</div>
+  
 - Set the voltage (V=12V) and Frequency (500Hz).
 - Choose the values of   R1, L1, M and R4 from the capacitance box and the resistance box.
 - Run simulation. Observe the milivoltmeter pointer.
