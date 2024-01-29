@@ -1,0 +1,39 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "If δ is the loss angle then the dissipation factor is given by",
+      "answers": {
+        "a": "sin δ",
+        "b": "cos δ",
+        "c": "tan δ",
+        "d": "cot δ"
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (c).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (c).",
+        "c": "You have choosen option (c). The answer is correct",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (c)."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The dielectric loss of pure capacitor is equal to",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "maximum",
+        "d": "none of these"
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is correct.",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a)."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
