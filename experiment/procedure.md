@@ -1,6 +1,6 @@
 ## Procedure
 <div align="center">
-![Circuit diagram for measurement of capacitance by Carey Foster Bridge](images/careyfoster_capacitance_procedure_upload.jpg)<br/>
+<img src="./images/careyfoster_capacitance_procedure_upload.jpg"><br/>
   Figure 1: Circuit diagram for measurement of capacitance by Carey Foster Bridge
 </div>
   
